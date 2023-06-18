@@ -4,9 +4,10 @@
 #include "tarefa.h"
 
 
-class quadroKaban{
+class quadroKanban{
     public:
-    quadroKaban();
+    quadroKanban();
+    ~quadroKanban();
     //inserir metodos para adicionar, mover e remover tarefas das colunas
 
     private:
