@@ -13,6 +13,6 @@ class quadroKaban{
     vector<tarefa> tarefas;
     vector<tarefa> tarefasConcluidas;
     vector<tarefa> tarefasEmAndamento;
-}
+};
 
 #endif // !QUADROKABAN_H

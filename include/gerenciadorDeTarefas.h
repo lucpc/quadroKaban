@@ -13,8 +13,8 @@ class gerenciadorDeTarefas{
         
 
 
-}
+};
 
-
+#endif // GERENCIADORDETAREFAS_H
 
 
