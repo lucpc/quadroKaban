@@ -18,15 +18,15 @@ O Projeto Quadro Kanban possui as seguintes funcionalidades principais:
 3. **Movimentação de cartões**: Os usuários podem mover os "cartões" entre as colunas para refletir o progresso real das tarefas.
 
 ## Recursos
-
-O projeto contará com o uso de alguns algoritmos de busca e de ordenação.
-
-Para os de busca, serão usados a busca binária, de Big(O) = lg(n), e a busca sequencial, de Big(O) = n. A escolha desses dois métodos de busca foi devido a, respectivamente, sua eficiência e sua simplicidade.
-
-Para o de ordenação, será ultilizado o será o Bubble-Sort, o qual possui uma complexidade de Big(O) = n^2. Devido ao seu uso simples, decidiu-se usá-lo para a implementação do projeto.
-
-Haverá o uso também de um TADS para o projeto.
+Haverá o uso de TADS para o projeto.
 
 De início, será a fila, pois sua lógica de First-In First-Out se encaixa bem com o intuito do projeto e ajudará no manuseio das tarefas durante o funcionamento do código.
 
+Também se usará listas, já que o seu uso eficiente da memória irá ser útil durante a implementação do código.
 
+O projeto contará também com o uso de alguns algoritmos de busca e de ordenação.
+
+Para os de busca, serão usados a busca binária, de Big(O) = lg(n), e a busca sequencial, de Big(O) = n. A escolha desses dois métodos de busca foi devido a, respectivamente, sua eficiência e sua simplicidade,
+além disso, cada um desses algoritmos serão aplicados de acordo com o TAD ultilizado para armazenar os elementos.
+
+Para o de ordenação, será ultilizado o será o Bubble-Sort, o qual possui uma complexidade de Big(O) = n^2. Devido ao seu uso simples, decidiu-se usá-lo para a implementação do projeto.
