@@ -21,9 +21,9 @@ O Projeto Quadro Kanban possui as seguintes funcionalidades principais:
 
 O projeto contará com o uso de alguns algoritmos de busca e de ordenação.
 
-Para o de busca, será usada a busca binária, devido a sua eficiência, a qual possui uma complexidade de Big(O) = lg(n), e a busca sequencial, devido a sua simplicidade de uso, sua complexidade é de Big(O) = n.
+Para os de busca, serão usados a busca binária, de Big(O) = lg(n), e a busca sequencial, de Big(O) = n. A escolha desses dois métodos de busca foi devido a, respectivamente, sua eficiência e sua simplicidade.
 
-O algoritmos de ordenação usado, aproveitando-se ja da busca binária, será o Quick-Sort, o qual possui uma complexidade de Big(O) = n*lg(n).
+Para o de ordenação, será ultilizado o será o Bubble-Sort, o qual possui uma complexidade de Big(O) = n^2. Devido ao seu uso simples, decidiu-se usá-lo para a implementação do projeto.
 
 Alguns TADS também serão ultilizados para a implementação do projeto.
 O priemiro deles será a fila, pois sua lógica de First-In First-Out se encaixa bem com o intuito do projeto e ajudará bem no manuseio das tarefas.
