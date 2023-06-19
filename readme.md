@@ -25,7 +25,8 @@ Para os de busca, serão usados a busca binária, de Big(O) = lg(n), e a busca s
 
 Para o de ordenação, será ultilizado o será o Bubble-Sort, o qual possui uma complexidade de Big(O) = n^2. Devido ao seu uso simples, decidiu-se usá-lo para a implementação do projeto.
 
-Alguns TADS também serão ultilizados para a implementação do projeto.
-O priemiro deles será a fila, pois sua lógica de First-In First-Out se encaixa bem com o intuito do projeto e ajudará bem no manuseio das tarefas.
+Haverá o uso também de um TADS para o projeto.
+
+De início, será a fila, pois sua lógica de First-In First-Out se encaixa bem com o intuito do projeto e ajudará no manuseio das tarefas durante o funcionamento do código.
 
 
