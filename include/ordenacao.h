@@ -1,23 +1,7 @@
-#include <vector>
-#include <iostream>
-
-using namespace std;
+#ifndef ORDENACAO_H
+#define ORDENACAO_H
 
 template <typename T>
-void bubbleSort(vector<T>& v){
-    int i, j;
-    T aux;
-    for(i = 0; i < v.size(); i++){
-        for(j = 0; j < v.size() - 1; j++){
-            if(v[j] > v[j + 1]){
-                aux = v[j];
-                v[j] = v[j + 1];
-                v[j + 1] = aux;
-            }
-        }
-    }
-}
+void bubbleSort(vector<T>& v);
 
-
-
-
+#endif // !ORDENACAO_H
