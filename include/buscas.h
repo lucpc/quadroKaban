@@ -3,7 +3,7 @@
 
 
 template <typename T>
-void buscaSequencial(vector<T>& v, T& x);
+int buscaSequencial(vector<T>& v, T& x);
 
 template <typename T>
 void buscaBinaria(vector<T>& v, T& x);
