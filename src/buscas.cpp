@@ -5,19 +5,18 @@
 using namespace std;
 
 template <typename T>
-void buscaSequencial(vector<T>& v, T& x){
+int buscaSequencial(vector<T>& v, T& x){
     int i;
     for(i = 0; i < v.size(); i++){
         if(v[i] == x){
-            cout << "Elemento encontrado na posicao " << i << endl;
-            return;
+            return i;
         }
     }
-    cout << "Elemento nao encontrado" << endl;
+    return -1;
 }
 
 template <typename T>
-void buscaBinaria(vector<T>& v, T& x){
+void buscaBinaria(vector<T> &v, T &x){
     int inicio = 0;
     int fim = v.size() - 1;
     int meio;
@@ -35,5 +34,4 @@ void buscaBinaria(vector<T>& v, T& x){
         }
     }
     cout << "Elemento nao encontrado" << endl;
-    }
 }

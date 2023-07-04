@@ -4,8 +4,8 @@
 
 class gerenciadorDeTarefas{
     public:
-        TaskManager();
-        ~TaskManager();
+        gerenciadorDeTarefas();
+        ~gerenciadorDeTarefas();
         //inserir metodos para adicionar, mover e remover tarefas das colunas
         //metodos para classificar as tarefas usando algoritmos de ordenação
 
