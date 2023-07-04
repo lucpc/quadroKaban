@@ -10,6 +10,7 @@ class quadroKanban{
     ~quadroKanban();
     //inserir metodos para adicionar, mover e remover tarefas das colunas
 
+
     private:
     vector<tarefa> tarefas;
     vector<tarefa> tarefasConcluidas;
