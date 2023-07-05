@@ -3,6 +3,8 @@
 #include <vector>
 #include "tarefa.h"
 
+using namespace std;
+
 
 class quadroKaban{
     public:

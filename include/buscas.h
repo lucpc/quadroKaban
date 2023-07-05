@@ -1,5 +1,9 @@
 #ifndef BUSCAS_H
 #define BUSCAS_H
+#include <vector>
+using namespace std;
+
+
 
 
 template <typename T>
