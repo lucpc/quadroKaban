@@ -8,9 +8,12 @@ class quadroKaban{
     public:
     quadroKaban();
     ~quadroKaban();
+    tarefa getTarefa(int index);
+    int getQuatidade(void);
     void inserirTarefa(tarefa t);
-    bool removerTarefa(vector<tarefa> &v, tarefa t);
-    void atualizarTarefa(tarefa t);
+    bool removerTarefa(tarefa t);
+    bool atualizarTarefa(tarefa t);
+    void mostrarTarefas(void);
     void statusTarefa(tarefa t);
     void statusGeral(void);
 

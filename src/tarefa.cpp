@@ -1,12 +1,12 @@
 #include "../include/tarefa.h"
 
-tarefa::tarefa(const std::string& nome, const std::string& descricao, const std::string& data, const std::string& hora, std::string& situacao, int prioridade){
+tarefa::tarefa(const std::string& nome, const std::string& descricao, const std::string& data, const std::string& hora, int prioridade){
     setNome(nome);
     setDescricao(descricao);
     setData(data);
     setHora(hora);
-    setSituacao(situacao);
     setPrioridade(prioridade);
+    setSituacao("Em andamento");
 }
 
 tarefa::~tarefa(){};
@@ -32,7 +32,7 @@ std::string tarefa::getData(void){
     return data;
 }
 
-void tarefa::setNome(std::string hr){
+void tarefa::setHora(std::string hr){
     hora = hr;
 }
 std::string tarefa::getHora(void){

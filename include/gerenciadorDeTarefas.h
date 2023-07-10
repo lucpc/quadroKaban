@@ -1,6 +1,6 @@
 #ifndef GERENCIADORDETAREFAS_H
 #define GERENCIADORDETAREFAS_H
-#include "quadroKanban.h"
+#include "quadroKaban.h"
 
 class gerenciadorDeTarefas{
     public:
@@ -10,7 +10,7 @@ class gerenciadorDeTarefas{
         //metodos para classificar as tarefas usando algoritmos de ordenação
 
     private:
-        quadroKanban quadro;
+        quadroKaban quadro;
         
 
 
