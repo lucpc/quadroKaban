@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "../include/quadroKaban.h"
 #include "../include/buscas.h"
 
@@ -10,24 +11,53 @@ quadroKaban::~quadroKaban(){
     tarefasConcluidas.clear();
 };
 
+tarefa quadroKaban::getTarefa(int index){
+    return tarefas[index];
+}
+
+int quadroKaban::getQuatidade(void){
+    return tarefas.size();
+}
+
 void quadroKaban::inserirTarefa(tarefa t){
     tarefas.push_back(t);
     tarefasEmAndamento.push_back(t);
 }
 
-bool quadroKaban::removerTarefa(vector<tarefa> &v, tarefa t){
-    int index = buscaSequencial(v, t);
+bool quadroKaban::removerTarefa(tarefa t){
+    int index = buscaSequencial(tarefas, t);
     if (index >= 0){
-        v.erase(v.begin()+index);
+        int s;
+        if (tarefas[index].getSituacao() == "Em andamento"){
+            s = buscaSequencial(tarefasEmAndamento, t);
+        } else{
+            s = buscaSequencial(tarefasConcluidas, t);
+        }
+        tarefas.erase(tarefas.begin()+index);
         return true;
     }
     return false;
 }
 
-void quadroKaban::atualizarTarefa(tarefa t){
-    t.setSituacao("Concluída");
-    removerTarefa(tarefasEmAndamento, t);
-    tarefasConcluidas.push_back(t);
+bool quadroKaban::atualizarTarefa(tarefa t){
+    int index = buscaSequencial(tarefasEmAndamento, t);
+    if (index >= 0){
+        t.setSituacao("Concluída");
+        tarefasEmAndamento.erase(tarefasEmAndamento.begin()+index);
+        tarefasConcluidas.push_back(t);
+        return true;
+    }
+    return false;
+    
+}
+
+void quadroKaban::mostrarTarefas(void){
+    if (!tarefas.size()){
+        return;
+    }
+    for (int i = 0; i < tarefas.size(); ++i){
+        std::cout << "[" << i << "]" << tarefas[i].getNome() << std::endl;
+    }
 }
 
 void quadroKaban::statusTarefa(tarefa t){

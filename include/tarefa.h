@@ -7,7 +7,8 @@ using namespace std;
 class tarefa{
     public:
 
-        tarefa(const string& nome, const string& descricao, const string& data, const string& hora, string& situacao, int prioridade);
+        tarefa(){};
+        tarefa(const string& nome, const string& descricao, const string& data, const string& hora, int prioridade);
         ~tarefa();
         void setNome(string n);
         string getNome(void);
