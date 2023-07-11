@@ -1,10 +1,9 @@
 #include <iostream>
-
 #include "../include/tarefa.h"
-#include "../include/quadroKaban.h"
+#include "../include/quadroKanban.h"
 
 int main(void){
-    quadroKaban *quadro = new quadroKaban;
+    quadroKanban *quadro = new quadroKanban;
     tarefa tarefa_inserir, tarefa_remover, tarefa_atualizar;
     
     int escolha = 0;
@@ -12,7 +11,7 @@ int main(void){
     std::string nome_tarefa, descricao, data, hora, situacao;
     int prioridade;
 
-    std::cout << "------Quadro Kaban------" << std::endl;
+    std::cout << "------Quadro Kanban------" << std::endl;
     
     while (escolha != 5){
         std::cout << "[1] Visualizar quadro" << std::endl;

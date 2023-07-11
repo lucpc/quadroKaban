@@ -1,15 +1,15 @@
-#ifndef QUADROKABAN_H
-#define QUADROKABAN_H
+#ifndef QUADROKANBAN_H
+#define QUADROKANBAN_H
 #include <vector>
 #include "tarefa.h"
 
 using namespace std;
 
 
-class quadroKaban{
+class quadroKanban{
     public:
-    quadroKaban();
-    ~quadroKaban();
+    quadroKanban();
+    ~quadroKanban();
     tarefa getTarefa(int index);
     int getQuatidade(void);
     void inserirTarefa(tarefa t);
@@ -26,6 +26,7 @@ class quadroKaban{
     vector<tarefa> tarefas;
     vector<tarefa> tarefasConcluidas;
     vector<tarefa> tarefasEmAndamento;
+
 };
 
-#endif // !QUADROKABAN_H
+#endif // !QUADROKANBAN_H
