@@ -2,6 +2,7 @@
 #include <string>
 #include "../include/quadroKaban.h"
 #include "../include/buscas.h"
+#include "buscas.cpp"
 
 quadroKaban::quadroKaban(){};
 
@@ -53,26 +54,35 @@ bool quadroKaban::atualizarTarefa(tarefa t){
 
 void quadroKaban::mostrarTarefas(void){
     if (!tarefas.size()){
+        std::cout << "\nSem tarefas no momento" << std::endl;
         return;
     }
-    for (int i = 0; i < tarefas.size(); ++i){
+    std::cout << std::endl;
+    for (std::size_t i = 0; i < tarefas.size(); ++i){
         std::cout << "[" << i << "]" << tarefas[i].getNome() << std::endl;
     }
+    std::cout << std::endl;
 }
 
 void quadroKaban::statusTarefa(tarefa t){
     buscaSequencial(tarefas, t);
-    std::cout << "Tarefa " << t.getNome() << std::endl;
+    std::cout << "Tarefa: " << t.getNome() << std::endl;
     std::cout << "Descrição" << std::endl << t.getDescricao() << std::endl;
-    std::cout << "Data " << t.getData() << std::endl;
-    std::cout << "Hora " << t.getHora() << std::endl;
-    std::cout << "Prioridade " << t.getPrioridade() << std::endl;
-    std::cout << "Situação " << t.getSituacao() << std::endl;
+    std::cout << "Data: " << t.getData() << std::endl;
+    std::cout << "Hora: " << t.getHora() << std::endl;
+    std::cout << "Prioridade: " << t.getPrioridade() << std::endl;
+    std::cout << "Situação: " << t.getSituacao() << std::endl;
 }
 
 void quadroKaban::statusGeral(void){
-    for (int i = 0; i < tarefas.size(); ++i){
-        statusTarefa(tarefas[i]);
-        std::cout << "============" << std::endl;
+    if (getQuatidade() <= 0){
+        std::cout << "\nQuadro vazio!" << std::endl;
+        return;
     }
+    std::cout << "\n================================\n" << std::endl;
+    for (std::size_t i = 0; i < tarefas.size(); ++i){
+        statusTarefa(tarefas[i]);
+        std::cout << std::endl;
+    }
+    std::cout << "================================" << std::endl;
 }

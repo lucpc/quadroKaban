@@ -4,9 +4,9 @@
 using namespace std;
 
 template <typename T>
+
 int buscaSequencial(vector<T>& v, T& x){
-    int i;
-    for(i = 0; i < v.size(); i++){
+    for(std::size_t i = 0; i < v.size(); i++){
         if(v[i] == x){
             return i;
         }
