@@ -16,6 +16,8 @@ class quadroKaban{
     bool removerTarefa(tarefa t);
     bool atualizarTarefa(tarefa t);
     void mostrarTarefas(void);
+    void mostrarEmAndamento(void);
+    void mostrarConcluidas(void);
     void statusTarefa(tarefa t);
     void statusGeral(void);
 

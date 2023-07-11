@@ -64,6 +64,28 @@ void quadroKaban::mostrarTarefas(void){
     std::cout << std::endl;
 }
 
+void quadroKaban::mostrarEmAndamento(void){
+    if (!tarefasEmAndamento.size()){
+        std::cout << "\nNenhuma tarefa em andamento" << std::endl;
+        return;
+    }
+    for (std::size_t i = 0; i < tarefasEmAndamento.size(); ++i){
+        std::cout << "[" << i << "]" << tarefasEmAndamento[i].getNome() << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+void quadroKaban::mostrarConcluidas(void){
+    if (!tarefasConcluidas.size()){
+        std::cout << "\nNenhuma tarefa em andamento" << std::endl;
+        return;
+    }
+    for (std::size_t i = 0; i < tarefasConcluidas.size(); ++i){
+        std::cout << "[" << i << "]" << tarefasConcluidas[i].getNome() << std::endl;
+    }
+    std::cout << std::endl;
+}
+
 void quadroKaban::statusTarefa(tarefa t){
     buscaSequencial(tarefas, t);
     std::cout << "Tarefa: " << t.getNome() << std::endl;

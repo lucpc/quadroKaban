@@ -14,12 +14,14 @@ int main(void){
 
     std::cout << "----------------Quadro Kaban----------------" << std::endl;
     
-    while (escolha < 5){
+    while (escolha >= 0){
         std::cout << "\n[1] Visualizar quadro" << std::endl;
-        std::cout << "[2] Inserir tarefa" << std::endl;
-        std::cout << "[3] Remover tarefa" << std::endl;
-        std::cout << "[4] Atualizar tarefa" << std::endl;
-        std::cout << "[5] Sair do programa\n" << std::endl;
+        std::cout << "[2] Visualizar tarefas em andamento" << std::endl;
+        std::cout << "[3] Visualizar tarefas concluídas" << std::endl;
+        std::cout << "[4] Inserir tarefa" << std::endl;
+        std::cout << "[5] Remover tarefa" << std::endl;
+        std::cout << "[6] Atualizar tarefa" << std::endl;
+        std::cout << "[-1] Sair do programa\n" << std::endl;
 
         std::cout << "Opção: ";
         std::cin >> escolha;
@@ -28,8 +30,16 @@ int main(void){
             case 1:
                 quadro->statusGeral();
                 break;
-
+            
             case 2:
+                quadro->mostrarEmAndamento();
+                break;
+            
+            case 3:
+                quadro->mostrarConcluidas();
+                break;
+
+            case 4:
                 std::cout << "\nDigite -1 para cancelar\n" << std::endl;
                 std::cout << "Nome da tarefa: ";
                 std::cin >> nome_tarefa;
@@ -38,7 +48,7 @@ int main(void){
                     break;
                 }
                 std::cout << "Breve descrição: ";
-                std::cin >> descricao;
+                std::getline(std::cin, descricao);
                 if (descricao == "-1"){
                     std::cout << "\nOperação cancelada!" << std::endl;
                     break;
@@ -66,7 +76,7 @@ int main(void){
                 quadro->inserirTarefa(tarefa_inserir);
                 break;
         
-            case 3:
+            case 5:
                 quadro->mostrarTarefas();
                 if (quadro->getQuatidade() <= 0){
                     break;
@@ -89,7 +99,7 @@ int main(void){
                 quadro->removerTarefa(tarefa_remover);
                 std::cout << "\nTarefa " << tarefa_remover.getNome() << " removida!" << std::endl;
                 break;
-            case 4:
+            case 6:
                 quadro->mostrarTarefas();
                 if (quadro->getQuatidade() <= 0){
                     break;
