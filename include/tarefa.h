@@ -22,6 +22,7 @@ class tarefa{
         string getSituacao(void);
         void setPrioridade(int prio);
         int getPrioridade(void);
+        bool operator==(tarefa);
 
     private:
         string nome;
