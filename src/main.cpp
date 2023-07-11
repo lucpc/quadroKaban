@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <vector>
 #include "../include/tarefa.h"
 #include "../include/quadroKanban.h"
 
