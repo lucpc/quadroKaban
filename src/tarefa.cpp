@@ -1,3 +1,5 @@
+#include <iostream>
+#include <string>
 #include "../include/tarefa.h"
 
 tarefa::tarefa(const std::string& nome, const std::string& descricao, const std::string& data, const std::string& hora, int prioridade){
@@ -52,3 +54,15 @@ void tarefa::setPrioridade(int prio){
 int tarefa::getPrioridade(void){
     return prioridade;
 }
+
+bool tarefa::operator==(tarefa t){
+    if (getNome() != t.nome){return false;}
+    if (getDescricao() != t.descricao){return false;}
+    if (getData() != t.data){return false;}
+    if (getHora() != t.hora){return false;}
+    if (getPrioridade() != t.prioridade){return false;}
+
+    return true;
+}
+
+
