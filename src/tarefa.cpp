@@ -64,3 +64,5 @@ bool tarefa::operator==(tarefa t){
 
     return true;
 }
+
+

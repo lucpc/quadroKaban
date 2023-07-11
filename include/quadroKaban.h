@@ -3,6 +3,8 @@
 #include <vector>
 #include "tarefa.h"
 
+using namespace std;
+
 
 class quadroKaban{
     public:
@@ -18,6 +20,7 @@ class quadroKaban{
     void statusGeral(void);
 
     //inserir metodos para adicionar, mover e remover tarefas das colunas
+
 
     private:
     vector<tarefa> tarefas;
