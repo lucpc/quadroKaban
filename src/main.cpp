@@ -1,6 +1,7 @@
 #include <iostream>
+#include <string>
+#include <limits>
 
-#include "../include/tarefa.h"
 #include "../include/quadroKaban.h"
 
 int main(void){
@@ -9,7 +10,7 @@ int main(void){
     
     int escolha = 0;
 
-    std::string nome_tarefa, descricao, data, hora, situacao;
+    std::string nome_tarefa, descricao, line, data, hora, situacao;
     int prioridade;
 
     std::cout << "----------------Quadro Kaban----------------" << std::endl;
@@ -21,7 +22,7 @@ int main(void){
         std::cout << "[4] Inserir tarefa" << std::endl;
         std::cout << "[5] Remover tarefa" << std::endl;
         std::cout << "[6] Atualizar tarefa" << std::endl;
-        std::cout << "[-1] Sair do programa\n" << std::endl;
+        std::cout << "\n[-1] Sair do programa\n" << std::endl;
 
         std::cout << "Opção: ";
         std::cin >> escolha;
@@ -48,7 +49,8 @@ int main(void){
                     break;
                 }
                 std::cout << "Breve descrição: ";
-                std::getline(std::cin, descricao);
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::getline(std::cin, descricao);                
                 if (descricao == "-1"){
                     std::cout << "\nOperação cancelada!" << std::endl;
                     break;
@@ -118,7 +120,7 @@ int main(void){
                     }
                 }
                 if (escolha == -1){break;}
-                tarefa_atualizar = quadro->getTarefa(escolha);   
+                tarefa_atualizar = quadro->getTarefa(escolha);
                 quadro->atualizarTarefa(tarefa_atualizar);
                 break;
             
