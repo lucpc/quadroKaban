@@ -1,14 +1,10 @@
 #include <iostream>
 #include <string>
-<<<<<<< HEAD
 #include <vector>
 #include "../include/tarefa.h"
 #include "../include/quadroKanban.h"
-=======
 #include <limits>
 
-#include "../include/quadroKaban.h"
->>>>>>> d812498848367835d0623d7dbddac676956fb631
 
 int main(void){
     quadroKanban *quadro = new quadroKanban;
@@ -19,11 +15,7 @@ int main(void){
     std::string nome_tarefa, descricao, line, data, hora, situacao;
     int prioridade;
 
-<<<<<<< HEAD
     std::cout << "------Quadro Kanban------" << std::endl;
-=======
-    std::cout << "----------------Quadro Kaban----------------" << std::endl;
->>>>>>> bc60b8e080bacd904928ea65eeca4e777461b284
     
     while (escolha >= 0){
         std::cout << "\n[1] Visualizar quadro" << std::endl;

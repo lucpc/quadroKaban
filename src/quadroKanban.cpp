@@ -1,31 +1,31 @@
 #include <iostream>
 #include <string>
-#include "../include/quadroKaban.h"
+#include "../include/quadroKanban.h"
 #include "../include/buscas.h"
 #include "buscas.cpp"
 
-quadroKaban::quadroKaban(){};
+quadroKanban::quadroKanban(){};
 
-quadroKaban::~quadroKaban(){
+quadroKanban::~quadroKanban(){
     tarefas.clear();
     tarefasEmAndamento.clear();
     tarefasConcluidas.clear();
 };
 
-tarefa quadroKaban::getTarefa(int index){
+tarefa quadroKanban::getTarefa(int index){
     return tarefas[index];
 }
 
-int quadroKaban::getQuatidade(void){
+int quadroKanban::getQuatidade(void){
     return tarefas.size();
 }
 
-void quadroKaban::inserirTarefa(tarefa t){
+void quadroKanban::inserirTarefa(tarefa t){
     tarefas.push_back(t);
     tarefasEmAndamento.push_back(t);
 }
 
-bool quadroKaban::removerTarefa(tarefa t){
+bool quadroKanban::removerTarefa(tarefa t){
     int index = buscaSequencial(tarefas, t);
     if (index >= 0){
         int s;
@@ -40,7 +40,7 @@ bool quadroKaban::removerTarefa(tarefa t){
     return false;
 }
 
-bool quadroKaban::atualizarTarefa(tarefa t){
+bool quadroKanban::atualizarTarefa(tarefa t){
     int index = buscaSequencial(tarefasEmAndamento, t);
     if (index >= 0){
         t.setSituacao("Concluída");
@@ -52,7 +52,7 @@ bool quadroKaban::atualizarTarefa(tarefa t){
     
 }
 
-void quadroKaban::mostrarTarefas(void){
+void quadroKanban::mostrarTarefas(void){
     if (!tarefas.size()){
         std::cout << "\nSem tarefas no momento" << std::endl;
         return;
@@ -64,7 +64,7 @@ void quadroKaban::mostrarTarefas(void){
     std::cout << std::endl;
 }
 
-void quadroKaban::mostrarEmAndamento(void){
+void quadroKanban::mostrarEmAndamento(void){
     if (!tarefasEmAndamento.size()){
         std::cout << "\nNenhuma tarefa em andamento" << std::endl;
         return;
@@ -75,7 +75,7 @@ void quadroKaban::mostrarEmAndamento(void){
     }
 }
 
-void quadroKaban::mostrarConcluidas(void){
+void quadroKanban::mostrarConcluidas(void){
     if (!tarefasConcluidas.size()){
         std::cout << "\nNenhuma tarefa concluída" << std::endl;
         return;
@@ -86,7 +86,7 @@ void quadroKaban::mostrarConcluidas(void){
     }
 }
 
-void quadroKaban::statusTarefa(tarefa t){
+void quadroKanban::statusTarefa(tarefa t){
     buscaSequencial(tarefas, t);
     std::cout << "Tarefa: " << t.getNome() << std::endl;
     std::cout << "Descrição:" << std::endl << t.getDescricao() << std::endl;
@@ -96,7 +96,7 @@ void quadroKaban::statusTarefa(tarefa t){
     std::cout << "Situação: " << t.getSituacao() << std::endl;
 }
 
-void quadroKaban::statusGeral(void){
+void quadroKanban::statusGeral(void){
     if (getQuatidade() <= 0){
         std::cout << "\nQuadro vazio!" << std::endl;
         return;
