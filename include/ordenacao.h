@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/**
+ * @brief template de ordenação por seleção
+ * @param v
+ */
 template <typename T>
 void bubbleSort(vector<T>& v);
 
