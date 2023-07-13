@@ -1,11 +1,11 @@
 CC = g++
 CFLAGS = -Wall -Wextra  -pedantic -std=c++14 -Iinclude
 SOURCES = $(wildcard src/*.cpp)
-OBJECTS = $(SOURCES:.cpp=.o)
+OBJECTS = $(patsubst src/%.cpp, build/%.o, $(SOURCES))
 EXECUTABLE = bin/main
 
 TEST_SOURCES = $(filter-out src/main.cpp, $(SOURCES)) $(wildcard test/*.cpp)
-TEST_OBJECTS = $(TEST_SOURCES:.cpp=.o)
+TEST_OBJECTS = $(patsubst src/%.cpp, build/%.o, $(TEST_SOURCES))
 TEST_EXECUTABLE = bin/test
 
 all: $(EXECUTABLE) $(TEST_EXECUTABLE)
@@ -18,7 +18,7 @@ $(EXECUTABLE): $(OBJECTS)
 $(TEST_EXECUTABLE): $(TEST_OBJECTS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-%.o: %.cpp
+build/%.o: src/%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: run-test
@@ -41,3 +41,4 @@ clean-doc:
 .PHONY: doc
 doc:
 	doxygen Doxyfile
+
