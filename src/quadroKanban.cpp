@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "../include/quadroKanban.h"
 #include "../include/buscas.h"
 #include "buscas.cpp"
@@ -107,4 +108,36 @@ void quadroKanban::statusGeral(void){
         std::cout << std::endl;
     }
     std::cout << "================================" << std::endl;
+}
+
+void quadroKanban::salvarQuadro(void){
+    std::ofstream arquivo;
+    arquivo.open("../bin/quadroKanban.bin", std::ios::binary);
+    if (!arquivo.is_open()){
+        std::cout << "Erro ao abrir arquivo" << std::endl;
+        return;
+    }
+    for (std::size_t i = 0; i < tarefas.size(); ++i){
+        arquivo.write((char*)&tarefas[i], sizeof(tarefa));
+    }
+    arquivo.close();
+}
+
+void quadroKanban::carregarQuadro(void){
+    std::ifstream arquivo;
+    arquivo.open("../bin/quadroKanban.bin", std::ios::binary);
+    if (!arquivo.is_open()){
+        std::cout << "Erro ao abrir arquivo" << std::endl;
+        return;
+    }
+    tarefa t;
+    while (arquivo.read((char*)&t, sizeof(tarefa))){
+        tarefas.push_back(t);
+        if (t.getSituacao() == "Em andamento"){
+            tarefasEmAndamento.push_back(t);
+        } else{
+            tarefasConcluidas.push_back(t);
+        }
+    }
+    arquivo.close();
 }

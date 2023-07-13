@@ -65,6 +65,15 @@ class quadroKanban{
     */
     void statusGeral(void);
 
+    /*!
+     * metodo para salvar as tarefas do quadro em um arquivo
+    */
+    void salvarQuadro(void);
+    /*!
+     * metodo para carregar as tarefas do quadro de um arquivo
+    */
+    void carregarQuadro(void);
+
 
 
     private:

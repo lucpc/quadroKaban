@@ -14,6 +14,8 @@ int main(void){
 
     std::string nome_tarefa, descricao, line, data, hora, situacao;
     int prioridade;
+    
+    quadro->carregarQuadro();
 
     std::cout << "------Quadro Kanban------" << std::endl;
     
@@ -124,6 +126,8 @@ int main(void){
                 if (escolha == -1){break;}
                 tarefa_atualizar = quadro->getTarefa(escolha);
                 quadro->atualizarTarefa(tarefa_atualizar);
+                //salvar no arquivo
+                quadro->salvarQuadro();
                 break;
             
             default:
