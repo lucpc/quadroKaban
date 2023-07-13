@@ -112,7 +112,7 @@ void quadroKanban::statusGeral(void){
 
 void quadroKanban::salvarQuadro(void){
     std::ofstream arquivo;
-    arquivo.open("../bin/quadroKanban.bin", std::ios::binary);
+    arquivo.open("../data/quadroKanban.bin", std::ios::binary);
     if (!arquivo.is_open()){
         std::cout << "Erro ao abrir arquivo" << std::endl;
         return;
@@ -125,7 +125,7 @@ void quadroKanban::salvarQuadro(void){
 
 void quadroKanban::carregarQuadro(void){
     std::ifstream arquivo;
-    arquivo.open("../bin/quadroKanban.bin", std::ios::binary);
+    arquivo.open("../data/quadroKanban.bin", std::ios::binary);
     if (!arquivo.is_open()){
         std::cout << "Erro ao abrir arquivo" << std::endl;
         return;

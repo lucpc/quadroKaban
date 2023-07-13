@@ -15,7 +15,6 @@ int main(void){
     std::string nome_tarefa, descricao, line, data, hora, situacao;
     int prioridade;
     
-    quadro->carregarQuadro();
 
     std::cout << "------Quadro Kanban------" << std::endl;
     
@@ -134,5 +133,6 @@ int main(void){
                 break;
         }
     }
+    quadro->carregarQuadro();
     return 0;
 }
