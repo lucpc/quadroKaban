@@ -80,7 +80,13 @@ class tarefa{
           \return int
          */
         int getPrioridade(void);
+        /*!
+          método que retorna a prioridade da tarefa
+        */
         bool operator==(tarefa);
+        /*
+          método overloading que compara se uma tarefa é igual a outra
+        */
 
     private:
         /*!
