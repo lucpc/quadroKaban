@@ -1,4 +1,4 @@
-# Projeto Quadro Kanban
+# EzKanban
 
 ## Descrição
 
@@ -9,13 +9,9 @@ Cada tarefa é representada por um cartão que pode ser movido entre as colunas 
 
 ## Funcionalidades
 
-O Projeto Quadro Kanban possui as seguintes funcionalidades principais:
-
-1. **Criação de tarefas**: Os usuários podem criar novas tarefas e atribuir-lhes um título, descrição e prazo de entrega.
-
-2. **Gerenciamento de colunas**: Os usuários podem criar, renomear ou excluir colunas de acordo com suas necessidades específicas. 
-
-3. **Movimentação de cartões**: Os usuários podem mover os "cartões" entre as colunas para refletir o progresso real das tarefas.
+O programa tem como funcionalidade a criação de tarefas acompanhada de um nome, descrição, data, horário, prioridade e situação (a fazer, em andamento e concluída).
+De acordo com a situação descrita, o programa vai alocar em vetores diferentes de acordo com a situação descrita. Dessa forma, foram implementadas funções de criação, remoção e modificação das tarefas
+para possibilitar o pleno funcionamento da apilcação.
 
 ## Recursos
 
@@ -31,7 +27,9 @@ Para os de busca, serão usados a busca binária, de Big(O) = lg(n), e a busca s
 além disso, cada um desses algoritmos serão aplicados de acordo com o TAD ultilizado para armazenar os elementos.
 
 Para o de ordenação, será ultilizado o será o Bubble-Sort, o qual possui uma complexidade de Big(O) = n^2. Devido ao seu uso simples, decidiu-se usá-lo para a implementação do projeto.
+## Futuras Atualizações
 
+- criação da interface gráfica
 ## Integrantes
 
 Luscas Pinheiro Caldas - 20220040190
