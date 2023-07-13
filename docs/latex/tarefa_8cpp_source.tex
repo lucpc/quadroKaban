@@ -1,0 +1,74 @@
+\hypertarget{tarefa_8cpp_source}{}\doxysection{tarefa.\+cpp}
+\label{tarefa_8cpp_source}\index{/home/lucas/Dropbox/aprendizado/lp1/projetoFinal/src/tarefa.cpp@{/home/lucas/Dropbox/aprendizado/lp1/projetoFinal/src/tarefa.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}../include/tarefa.h"{}}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00005}00005\ tarefa::tarefa(\textcolor{keyword}{const}\ std::string\&\ nome,\ \textcolor{keyword}{const}\ std::string\&\ descricao,\ \textcolor{keyword}{const}\ std::string\&\ data,\ \textcolor{keyword}{const}\ std::string\&\ hora,\ \textcolor{keywordtype}{int}\ prioridade)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00006}00006\ \ \ \ \ setNome(nome);}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00007}00007\ \ \ \ \ setDescricao(descricao);}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00008}00008\ \ \ \ \ setData(data);}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00009}00009\ \ \ \ \ setHora(hora);}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00010}00010\ \ \ \ \ setPrioridade(prioridade);}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00011}00011\ \ \ \ \ setSituacao(\textcolor{stringliteral}{"{}Em\ andamento"{}});}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00014}00014\ tarefa::\string~tarefa()\{\};}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00016}00016\ \textcolor{keywordtype}{void}\ tarefa::setNome(std::string\ n)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00017}00017\ \ \ \ \ nome\ =\ n;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00019}00019\ std::string\ tarefa::getNome(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ nome;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00023}00023\ \textcolor{keywordtype}{void}\ tarefa::setDescricao(std::string\ desc)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00024}00024\ \ \ \ \ descricao\ =\ desc;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00026}00026\ std::string\ tarefa::getDescricao(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ descricao;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00030}00030\ \textcolor{keywordtype}{void}\ tarefa::setData(std::string\ dt)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00031}00031\ \ \ \ \ data\ =\ dt;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00033}00033\ std::string\ tarefa::getData(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00037}00037\ \textcolor{keywordtype}{void}\ tarefa::setHora(std::string\ hr)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00038}00038\ \ \ \ \ hora\ =\ hr;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00040}00040\ std::string\ tarefa::getHora(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ hora;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00044}00044\ \textcolor{keywordtype}{void}\ tarefa::setSituacao(std::string\ sit)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00045}00045\ \ \ \ \ situacao\ =\ sit;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00047}00047\ std::string\ tarefa::getSituacao(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ situacao;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00051}00051\ \textcolor{keywordtype}{void}\ tarefa::setPrioridade(\textcolor{keywordtype}{int}\ prio)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00052}00052\ \ \ \ \ prioridade\ =\ prio;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00054}00054\ \textcolor{keywordtype}{int}\ tarefa::getPrioridade(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ prioridade;}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00058}00058\ \textcolor{keywordtype}{bool}\ tarefa::operator==(tarefa\ t)\{}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (getNome()\ !=\ t.nome)\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (getDescricao()\ !=\ t.descricao)\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (getData()\ !=\ t.data)\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (getHora()\ !=\ t.hora)\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}\ (getPrioridade()\ !=\ t.prioridade)\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{tarefa_8cpp_source_l00068}00068\ }
+
+\end{DoxyCode}
